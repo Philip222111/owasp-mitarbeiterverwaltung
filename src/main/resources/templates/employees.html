@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="de" xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"><title>Mitarbeiter</title></head>
+<body>
+    <h1>Sichere Mitarbeiterverwaltung</h1>
+    <table border="1">
+        <tr><th>ID</th><th>Name</th><th>Abteilung</th><th>Aktion</th></tr>
+        <tr th:each="employee : ${employees}">
+            <td th:text="${employee.id}"></td>
+            <td th:text="${employee.firstname + ' ' + employee.lastname}"></td>
+            <td th:text="${employee.department}"></td>
+            <td><a th:href="@{/employees/{id}(id=${employee.id})}">Anzeigen</a></td>
+        </tr>
+    </table>
+    <form method="post" action="/logout">
+        <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
+        <button type="submit">Logout</button>
+    </form>
+    <p><a href="/">Startseite</a></p>
+</body>
+</html>

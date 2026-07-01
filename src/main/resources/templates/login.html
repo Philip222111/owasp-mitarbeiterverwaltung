@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="de" xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"><title>Login</title></head>
+<body>
+    <h1>Login</h1>
+    <p style="color:red" th:if="${param.error}">Login fehlgeschlagen.</p>
+    <p style="color:red" th:if="${param.captchaError}">CAPTCHA falsch.</p>
+    <p style="color:green" th:if="${param.logout}">Du wurdest ausgeloggt.</p>
+    <form method="post" action="/login">
+        <div><label>Benutzername:</label><input type="text" name="username"></div>
+        <div><label>Passwort:</label><input type="password" name="password"></div>
+        <div><label>CAPTCHA: Was ist 3 + 4?</label><input type="text" name="captcha"></div>
+        <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
+        <button type="submit">Einloggen</button>
+    </form>
+    <p>Admin: admin / Admin123</p>
+    <p>User: user / User1234</p>
+    <p>CAPTCHA: 7</p>
+    <a href="/">Zurück</a>
+</body>
+</html>

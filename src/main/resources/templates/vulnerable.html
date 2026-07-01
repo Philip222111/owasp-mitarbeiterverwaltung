@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="de" xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"><title>Unsichere Demo</title></head>
+<body>
+    <h1>Unsichere Demo: Broken Access Control</h1>
+    <p style="color:red;">Diese Seite ist absichtlich unsicher. Jeder kann fremde Mitarbeiterdaten sehen.</p>
+    <p><strong>ID:</strong> <span th:text="${employee.id}"></span></p>
+    <p><strong>Vorname:</strong> <span th:text="${employee.firstname}"></span></p>
+    <p><strong>Nachname:</strong> <span th:text="${employee.lastname}"></span></p>
+    <p><strong>Abteilung:</strong> <span th:text="${employee.department}"></span></p>
+    <p><strong>E-Mail:</strong> <span th:text="${employee.email}"></span></p>
+    <a href="/">Zurück</a>
+</body>
+</html>
