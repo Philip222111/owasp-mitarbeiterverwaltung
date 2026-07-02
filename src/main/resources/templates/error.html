@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Zugriff verweigert</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="brand">
+        <div class="logo">403</div>
+        <div>OWASP Mitarbeiterverwaltung</div>
+    </div>
+    <div class="navlinks">
+        <a href="/">Dashboard</a>
+        <a href="/employees">Mitarbeiter</a>
+    </div>
+</nav>
+
+<main class="container">
+    <section class="hero">
+        <div class="hero-main">
+            <span class="kicker">Gegenmassnahme aktiv</span>
+            <h1>Zugriff verweigert</h1>
+            <p>
+                Du hast keine Berechtigung für diese Ressource.
+                Das zeigt, dass die Gegenmassnahme gegen Broken Access Control funktioniert.
+            </p>
+
+            <div class="hero-actions">
+                <a class="btn" href="/employees">Zurück zur sicheren App</a>
+                <a class="btn btn-outline" href="/">Dashboard</a>
+            </div>
+        </div>
+
+        <div class="hero-side">
+            <div class="stat-card">
+                <div class="stat-number">403</div>
+                <div class="stat-label">Access Denied</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">OK</div>
+                <div class="stat-label">Autorisierung greift</div>
+            </div>
+        </div>
+    </section>
+</main>
+
+</body>
+</html>
